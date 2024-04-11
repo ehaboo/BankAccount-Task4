@@ -1,0 +1,13 @@
+<div class="content">
+    <form (ngSubmit)="search()" ngNativeValidate>
+        <label>
+        <span>Account Number</span>
+        <input class="input" required pattern="[0-9]{4,9}" type="search"
+            placeholder="Enter Account Number" name="accountNumber" [(ngModel)]="accountNumber">
+        </label>
+        <button>🔎</button>
+    </form>
+    <div class="container">
+        <app-card *ngFor="let o of operations" [operation]="o"/>
+    </div>
+</div>

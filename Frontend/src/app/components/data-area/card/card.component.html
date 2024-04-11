@@ -1,0 +1,19 @@
+<div class="card">
+    <div class="bg">
+        <p><b>Account Number:</b> 
+            {{operation.accountNumber}}</p>
+        <p><b>Operation Type:</b> 
+            {{operation.operationType}}</p>
+        <p><b>Amount:</b> 
+            {{operation.amount}}$</p>
+        <p><b>Date & Time:</b> 
+            {{operation.dateTime | date:"dd/MM/yyyy HH:mm"}}</p>
+    
+        @if(operation.operationType.toString() === "loan"){
+            <p><b>Interest:</b> {{operation.interest}}%</p>
+            <p><b>Payments:</b> {{operation.payments}}</p>
+        }
+    </div>
+    <div class="blob"></div>
+  </div>
+  
